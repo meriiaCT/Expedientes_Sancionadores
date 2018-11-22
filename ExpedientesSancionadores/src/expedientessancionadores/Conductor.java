@@ -18,7 +18,7 @@ public class Conductor {
     private LocalDateTime fecha_obtencion;
     private LocalDateTime fecha_caducidad;
     private boolean gafas_lentillas;
-    //hola, esto es otro comentario de prueba
+    
     public Conductor(String nombre, String apellidos, String dni, 
             String domicilio, String email, LocalDateTime fecha_obtencion, 
             LocalDateTime fecha_caducidad, boolean gafas_lentillas){

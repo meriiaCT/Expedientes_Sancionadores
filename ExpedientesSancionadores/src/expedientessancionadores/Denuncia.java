@@ -10,7 +10,7 @@ import java.time.*;
 import java.io.Serializable;
 
 public class Denuncia implements Serializable {
-    //Comeentario de prubea en la clase denuncia
+    
     private LocalDateTime fecha_hora;
     private int codigo;
     private String causa;
