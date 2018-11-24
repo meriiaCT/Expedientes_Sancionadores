@@ -39,12 +39,12 @@ public class Expediente_Sancionador implements Serializable {
         this.estado = e;
         this.alegacion = a;
     }
-    
+
     @Override
-    
-    public String toString(){
-        return("Notificacion " + getNotificacion() + " Estado " + getEstado() 
-                + " Alegacion " + getAlegacion());
+    public String toString() {
+        return "Expediente_Sancionador{" + "notificacion=" + notificacion + ", estado=" + estado + ", alegacion=" + alegacion + '}';
     }
+    
+    
     
 }

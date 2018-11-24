@@ -6,14 +6,10 @@ package expedientessancionadores;
  * @author Maria Corpas
  */
 public class Notificacion {
-    private String plazo;
     private Alegacion alegacion;
     private String causa;
     private int importe;
-
-    public String getPlazo() {
-        return plazo;
-    }
+    static final String PLAZO = "1 MES";
 
     public Alegacion getAlegacion() {
         return alegacion;
@@ -27,8 +23,7 @@ public class Notificacion {
         return importe;
     }
 
-    public Notificacion(String plazo, Alegacion alegacion, String causa, int importe) {
-        this.plazo = plazo;
+    public Notificacion(Alegacion alegacion, String causa, int importe) {
         this.alegacion = alegacion;
         this.causa = causa;
         this.importe = importe;
@@ -36,7 +31,7 @@ public class Notificacion {
 
     @Override
     public String toString() {
-        return "Notificacion{" + "plazo=" + plazo + ", alegacion=" + alegacion + ", causa=" + causa + ", importe=" + importe + '}';
+        return "Notificacion{" +"plazo="+PLAZO+"alegacion=" + alegacion + ", causa=" + causa + ", importe=" + importe + '}';
     }
     
     

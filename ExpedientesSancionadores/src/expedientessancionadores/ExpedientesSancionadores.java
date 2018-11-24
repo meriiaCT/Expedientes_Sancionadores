@@ -6,9 +6,6 @@
 package expedientessancionadores;
 
 import java.time.*;
-import java.util.*;
-import java.text.SimpleDateFormat;
-import java.text.DateFormat;
 
 /**
  *
@@ -26,9 +23,9 @@ public class ExpedientesSancionadores {
     	Conductor conductor1 = new Conductor("nom1", "ap11 ap 12", "dni1", "dom1", "email@1.com", LocalDateTime.of(2000, Month.JANUARY, 1, 00, 00, 00), LocalDateTime.of(2005, Month.JANUARY, 1, 00, 00, 00), true);
       	Conductor conductor2 = new Conductor("nom2", "ap12 ap 21", "dni2", "dom2", "email@2.com", LocalDateTime.of(2010, Month.JANUARY, 1, 00, 00, 00), LocalDateTime.of(2015, Month.JANUARY, 1, 00, 00, 00), false);
         Camion camion1 = new Camion("mat1", "mod1", "col1", conductor1,"cif1");
-        camion1.addConductor(conductor1);
-        camion1.addConductor(conductor2);
-        camion1.addConductor(conductor1);// Se pueden añadir conductores repetidos, aunque Camion.toString() los numere como si no estuvieran repetidos (1 == 3 en el ejemplo)
+        camion1.añadirConductor(conductor1);
+        camion1.añadirConductor(conductor2);
+        camion1.añadirConductor(conductor1);// Se pueden añadir conductores repetidos, aunque Camion.toString() los numere como si no estuvieran repetidos (1 == 3 en el ejemplo)
         System.out.println(conductor1.toString());
         System.out.println(conductor2.toString());
         System.out.println(camion1.toString());
@@ -59,9 +56,9 @@ public class ExpedientesSancionadores {
         System.out.println(a2.toString());
         
         //Crear Notificaciones
-        Notificacion n1 = new Notificacion("21/01/2019", a1, "Alta velocidad", 1000);
-        Notificacion n2 = new Notificacion("25/12/2018", a2, "Drogas", 2000);
-        Notificacion n3 = new Notificacion("20/02/2019", a3, "Alcohol", 1500);
+        Notificacion n1 = new Notificacion(a1, "Alta velocidad", 1000);
+        Notificacion n2 = new Notificacion(a2, "Drogas", 2000);
+        Notificacion n3 = new Notificacion(a3, "Alcohol", 1500);
         System.out.println(n1.toString());
         System.out.println(n2.toString());
         System.out.println(n3.toString());

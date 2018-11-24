@@ -31,12 +31,12 @@ public class Usuario implements Serializable {
        this.password = p;
        this.nombre = n;
    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "tipo=" + tipo + ", password=" + password + ", nombre=" + nombre + '}';
+    }
    
-   @Override
    
-   public String toString(){
-       return("Nombre " + getNombre() + " Password " + getPassword() 
-               + " Tipo " + getTipo());
-   }
    
 }

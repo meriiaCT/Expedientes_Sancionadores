@@ -39,11 +39,12 @@ public class Alegacion {
     public void rewriteAlegacion(String a){
         this.alegacion = a;
     }
-    
+
     @Override
-    
-    public String toString(){
-        return ("String " + getAlegacion() + " Estado " + isEstado());
+    public String toString() {
+        return "Alegacion{" + "alegacion=" + alegacion + ", estado=" + estado + '}';
     }
+    
+    
     
 }

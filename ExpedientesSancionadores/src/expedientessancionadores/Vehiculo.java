@@ -1,55 +1,52 @@
 
 package expedientessancionadores;
-
+import java.io.Serializable;
 /**
  *
- * @author Adrian Castro
+ * @author f.rivero.2016
  */
-
-public class Vehiculo {
-
+public abstract class Vehiculo implements Serializable {
     private String matricula;
-    private String modelo;
     private String color;
-    private Conductor conductor;
-
-    public Vehiculo(String matricula, String modelo, String color, Conductor conductor){
-	this.matricula = matricula;
-        this.modelo = modelo;
-        this.color = color;
-        this.conductor = conductor;
+    private String modelo;
+    
+    public Vehiculo(String matricula,String modelo,String color,Conductor conductor){
+        this.matricula=matricula;
+        this.color=color;
+        
+        this.modelo=modelo;
     }
-	
-    public Conductor getConductor(){
-        return conductor;
-    }
-	
+    
     public String getMatricula(){
         return matricula;
+    }
+    
+    public String getColor(){
+        return color;
     }
     
     public String getModelo(){
         return modelo;
     }
     
-    public String getColor(){
-        return color;
-    }
-	
-    @Override
     
+    @Override
     public String toString(){
-        return (conductor.toString() + "Datos del vehículo --> Matrícula: " + 
-                matricula + ". Modelo: " + modelo + ". Color: " + color + 
-                ". \n");
+        return "Matricula: "+matricula+" Color: "+color+" Modelo: "+modelo;
     }
-
-    public boolean equals(Vehiculo v){
-        if (this == v){return true;}
-        if (v == null){return false;}
-        if (getClass() != v.getClass()){return false;}
+    
+    @Override
+    public boolean equals(Object v){
+        if (this == v){
+            return true;
+        }
+        if (v == null){
+            return false;
+        }
+        if (getClass() != v.getClass()){
+            return false;
+        }
         Vehiculo vehiculo = (Vehiculo) v;
         return (vehiculo.getMatricula().equals(getMatricula())); 
     }
-    
 }
