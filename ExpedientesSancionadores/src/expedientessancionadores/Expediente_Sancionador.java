@@ -10,15 +10,15 @@ import java.io.Serializable;
 
 public class Expediente_Sancionador implements Serializable {
     
-    private String notificacion;
+    private Notificacion notificacion;
     private Estado_Enumeracion estado;
     private Alegacion alegacion;
 
-    public String getNotificacion() {
+    public Notificacion getNotificacion() {
         return notificacion;
     }
 
-    public void setNotificacion(String notificacion) {
+    public void setNotificacion(Notificacion notificacion) {
         this.notificacion = notificacion;
     }
 
@@ -34,7 +34,7 @@ public class Expediente_Sancionador implements Serializable {
         return alegacion;
     }
     
-    public Expediente_Sancionador(String n, Estado_Enumeracion e, Alegacion a){
+    public Expediente_Sancionador(Notificacion n, Estado_Enumeracion e, Alegacion a){
         this.notificacion = n;
         this.estado = e;
         this.alegacion = a;

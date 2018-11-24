@@ -46,8 +46,10 @@ public class ExpedientesSancionadores {
         //Crear alegaciones
         Alegacion a1 = new Alegacion("Esta es la alegacion 1 aceptada", true);
         Alegacion a2 = new Alegacion("Esta es la alegacion 2 denegada", false);
+        Alegacion a3 = new Alegacion("Esta es la alegacion 3 denegada", false);
         System.out.println(a1.toString());
         System.out.println(a2.toString());
+        System.out.println(a3.toString());
         //Añadir a la alegación 1
         a1.addAlegacion(" Estoy añadiendo a la alegacion 1");
         System.out.println(a1.toString());
@@ -55,11 +57,18 @@ public class ExpedientesSancionadores {
         //Sobreescribir la alegación 2
         a2.rewriteAlegacion("Sobreescribo la alegacion 2");
         System.out.println(a2.toString());
-
+        
+        //Crear Notificaciones
+        Notificacion n1 = new Notificacion("21/01/2019", a1, "Alta velocidad", 1000);
+        Notificacion n2 = new Notificacion("25/12/2018", a2, "Drogas", 2000);
+        Notificacion n3 = new Notificacion("20/02/2019", a3, "Alcohol", 1500);
+        System.out.println(n1.toString());
+        System.out.println(n2.toString());
+        System.out.println(n3.toString());
         //Crear expedientes sancionadores
-        Expediente_Sancionador es1 = new Expediente_Sancionador("Notificacion del ES1",Estado_Enumeracion.EN_PROCESO, a1);
-        Expediente_Sancionador es2 = new Expediente_Sancionador("Notificacion del ES2",Estado_Enumeracion.CONCLUIDO_CON_CARGOS, a2);
-        Expediente_Sancionador es3 = new Expediente_Sancionador("Notificacion del ES3",Estado_Enumeracion.CONCLUIDO_SIN_CARGOS, a2);
+        Expediente_Sancionador es1 = new Expediente_Sancionador(n1,Estado_Enumeracion.EN_PROCESO, a1);
+        Expediente_Sancionador es2 = new Expediente_Sancionador(n2,Estado_Enumeracion.CONCLUIDO_CON_CARGOS, a2);
+        Expediente_Sancionador es3 = new Expediente_Sancionador(n3,Estado_Enumeracion.CONCLUIDO_SIN_CARGOS, a2);
         System.out.println(es1.toString());
         System.out.println(es2.toString());
         System.out.println(es3.toString());
