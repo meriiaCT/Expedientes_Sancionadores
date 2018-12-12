@@ -12,7 +12,10 @@ public class Conductor implements Serializable{
     private String apellidos;    
     private String domicilio;
     private String email;    
-            
+    
+    public Conductor(){
+        
+    }
     public Conductor(String nombre, String apellidos, String dni, String domicilio, String email, LocalDateTime fecha_obtencion, LocalDateTime fecha_caducidad, boolean gafas_lentillas){
         carnet=new Carnet(dni,fecha_obtencion,fecha_caducidad,gafas_lentillas);
         this.nombre = nombre;

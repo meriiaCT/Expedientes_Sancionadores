@@ -11,7 +11,9 @@ public class Carnet implements Serializable {
     private LocalDateTime fecha_obtencion;
     private LocalDateTime fecha_caducidad;
     private boolean gafas_lentillas;
-    
+    public Carnet(){
+        
+    }
     public Carnet(String dni, LocalDateTime fecha_obtecion,LocalDateTime fecha_caducidad,boolean gafas_lentillas){
         this.dni=dni;
         this.fecha_caducidad=fecha_caducidad;
@@ -38,6 +40,23 @@ public class Carnet implements Serializable {
     public void setFecha_caducidad(LocalDateTime fecha_caducidad){
         this.fecha_caducidad = fecha_caducidad;
     }
+
+    public boolean isGafas_lentillas() {
+        return gafas_lentillas;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public void setFecha_obtencion(LocalDateTime fecha_obtencion) {
+        this.fecha_obtencion = fecha_obtencion;
+    }
+
+    public void setGafas_lentillas(boolean gafas_lentillas) {
+        this.gafas_lentillas = gafas_lentillas;
+    }
+    
     
     @Override
     public String toString(){
